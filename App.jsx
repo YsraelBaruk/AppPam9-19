@@ -5,8 +5,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from '@expo/vector-icons';
 // import Parse from 'parse/dist/parse.min.js';
 // import AsyncStorage from '@react-native-async-storage/async-storage';
-// import Cadastrar from './components/cadastrar';
-// import Consultar from './components/consultar';
+import Consultar from './components/consultar';
+import Cadastrar from './components/cadastrar';
 
 const Tabs = createBottomTabNavigator();
 // Parse.setAsyncStorage(AsyncStorage);
@@ -15,10 +15,12 @@ const Tabs = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Tabs.Navigator>
+        <Tabs.Screen name='Cadastrar' component={Cadastrar}/>
+        <Tabs.Screen name='Listar' component={Consultar}/>
+      </Tabs.Navigator>
+    </NavigationContainer>
   );
 }
 
