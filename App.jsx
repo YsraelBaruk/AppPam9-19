@@ -17,8 +17,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tabs.Navigator>
-        <Tabs.Screen name='Cadastrar' component={Cadastrar}/>
-        <Tabs.Screen name='Listar' component={Consultar}/>
+        <Tabs.Screen name='Cadastrar' component={Cadastrar}  options={{tabBarIcon:()=>{<Ionicons name="add" color={black} size={size} />} }} />
+        <Tabs.Screen name='Listar' component={Consultar} options={{tabBarIcon:()=>{<Ionicons name="list-circle-outline" color={color} size={size} />} }} />
       </Tabs.Navigator>
     </NavigationContainer>
   );
