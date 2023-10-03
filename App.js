@@ -1,12 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Parse from "parse/react-native.js";
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from '@expo/vector-icons';
+// import Parse from 'parse/dist/parse.min.js';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
+// import Cadastrar from './components/cadastrar';
+// import Consultar from './components/consultar';
 
-Parse.setAsyncStorage(AsyncStorage);
+const Tabs = createBottomTabNavigator();
+// Parse.setAsyncStorage(AsyncStorage);
+// Parse.initialize('n7j1NCvCyJVoqzTM7ydZKNksa2lMEyZcQO93lhmL','IaBYf19GXvWy5byDBd6EVq8SlM9JHK6a6Swj4rVz');
+// Parse.serverURL = 'https://parseapi.back4app.com/';
 
-Parse.initialize('n7j1NCvCyJVoqzTM7ydZKNksa2lMEyZcQO93lhmL','IaBYf19GXvWy5byDBd6EVq8SlM9JHK6a6Swj4rVz');
-Parse.serverURL = 'https://parseapi.back4app.com/';
 export default function App() {
   return (
     <View style={styles.container}>
