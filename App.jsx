@@ -17,11 +17,13 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tabs.Navigator>
-        <Tabs.Screen name='Cadastrar' component={Cadastrar}  options={{tabBarIcon:()=>{<Ionicons name="add" color={black} size={size} />} }} />
-        <Tabs.Screen name='Listar' component={Consultar} options={{tabBarIcon:()=>{<Ionicons name="list-circle-outline" color={color} size={size} />} }} />
+        <Tabs.Screen name='Cadastrar' component={Cadastrar}  options={{tabBarIcon:()=>{<Ionicons name="ios-add-circle-outline" color={black} size={size} />} }} />
+        <Tabs.Screen name='Listar' component={Consultar} options={{tabBarIcon:()=>{<Ionicons name="ios-list-circle-outline" color={color} size={size} />} }} />
       </Tabs.Navigator>
     </NavigationContainer>
   );
+  //ios-list-circle-outline
+  //ios-add-circle-outline
 }
 
 const styles = StyleSheet.create({
