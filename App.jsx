@@ -2,35 +2,33 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Ionicons from '@expo/vector-icons';
-// import Parse from 'parse/dist/parse.min.js';
-// import AsyncStorage from '@react-native-async-storage/async-storage';
-import Consultar from './components/consultar';
+import { Ionicons } from '@expo/vector-icons';
 import Cadastrar from './components/cadastrar';
+import Listar from './components/listar';
 
 const Tabs = createBottomTabNavigator();
-// Parse.setAsyncStorage(AsyncStorage);
-Parse.initialize('WgWMlpdR1qi4fJjjJLwK7uHTJg6ejuyohaZpInRh', '4ssc08BvXkdJjR2PACjAPJ63Q9cG3fmUOGNDYEEn');
-// Parse.serverURL = 'https://parseapi.back4app.com/';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Tabs.Navigator>
-        <Tabs.Screen name='Cadastrar' component={Cadastrar}  options={{tabBarIcon:()=>{<Ionicons name="ios-add-circle-outline" color={black} size={size} />} }} />
-        <Tabs.Screen name='Listar' component={Consultar} options={{tabBarIcon:()=>{<Ionicons name="ios-list-circle-outline" color={color} size={size} />} }} />
+      <Tabs.Navigator>        
+        <Tabs.Screen name='Cadastrar' component={Cadastrar}
+          options={{
+            tabBarLabel:'Home',
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="add-circle-outline" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen name='Consultar' component={Listar} 
+          options={{
+            tabBarLabel: 'Listar',
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="list-circle-outline" size={size} color={color} />
+            ),            
+          }}
+        />
       </Tabs.Navigator>
-    </NavigationContainer>
+    </NavigationContainer>    
   );
-  //ios-list-circle-outline
-  //ios-add-circle-outline
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
