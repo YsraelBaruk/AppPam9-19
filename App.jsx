@@ -10,7 +10,7 @@ import Cadastrar from './components/cadastrar';
 
 const Tabs = createBottomTabNavigator();
 // Parse.setAsyncStorage(AsyncStorage);
-// Parse.initialize('n7j1NCvCyJVoqzTM7ydZKNksa2lMEyZcQO93lhmL','IaBYf19GXvWy5byDBd6EVq8SlM9JHK6a6Swj4rVz');
+Parse.initialize('WgWMlpdR1qi4fJjjJLwK7uHTJg6ejuyohaZpInRh', '4ssc08BvXkdJjR2PACjAPJ63Q9cG3fmUOGNDYEEn');
 // Parse.serverURL = 'https://parseapi.back4app.com/';
 
 export default function App() {
