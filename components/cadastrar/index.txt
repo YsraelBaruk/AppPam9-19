@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 import { StyleSheet, View, Text, SafeAreaView, TextInput, Pressable, Alert } from 'react-native';
 
+Parse.setAsyncStorage(AsyncStorage);
 import Parse from "parse/react-native.js";
 import AsyncStorage from '@react-native-async-storage/async-storage';
-Parse.setAsyncStorage(AsyncStorage);
-Parse.initialize('WgWMlpdR1qi4fJjjJLwK7uHTJg6ejuyohaZpInRh', '4ssc08BvXkdJjR2PACjAPJ63Q9cG3fmUOGNDYEEn');
-Parse.serverURL = 'https://parseapi.back4app.com/';
+// Parse id, link
 import 'react-native-get-random-values';
 
 export default function Cadastrar() {
