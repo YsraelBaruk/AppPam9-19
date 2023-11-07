@@ -1,13 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons } from '@expo/vector-icons'; // biblioteca de Ícones 
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, Text, View } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { Ionicons } from '@expo/vector-icons' // biblioteca de Ícones 
 
-import Cadastrar from './components/cadastrar';
-import Listar from './components/listar';
+import Cadastrar from './components/cadastrar'
+import Listar from './components/listar'
 
-const Tabs = createBottomTabNavigator();
+const Tabs = createBottomTabNavigator()
 
 export default function App() {
   return (
@@ -46,7 +46,7 @@ export default function App() {
         />
       </Tabs.Navigator>
     </NavigationContainer>    
-  );
+  )
 }
 
 // F1 Show Spell Checker Configuration Info
